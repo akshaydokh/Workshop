@@ -1,0 +1,75 @@
+@import "mixins/container";
+$font-text: 10px;
+$bg-color : black;
+$font-color: white;
+$desktop-width: 978px;
+
+@media all and (min-width:$desktop-width){
+.header {
+    @include container;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+nav {
+    background-color: $bg-color;
+    height: 25px;
+    text-align: initial;
+
+    a{
+        color: $font-color;
+        margin-right: 20px;
+        font-size: 15px;
+
+    }
+}
+
+.div{
+    display: flex;
+
+    .div1{
+        width: 35%;
+
+        .about1{
+            font-size: $font-text;
+        }
+
+        img{
+            height: 100px;
+            width: 50%;
+        }
+
+        .vertical-menu {
+            width: 200px;
+
+            a {
+                background-color: #eee;
+                color: $bg-color;
+                display: block;
+                padding: 8px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: royalblue;
+                  }
+              }
+          }
+    }
+
+    .div2{
+        width: 60%;
+        
+        .about2{
+            font-size: $font-text;
+        }
+
+        img{
+            height: 100px;
+            width: 100%;
+        }
+    }
+}
+
+footer {
+    @include container;
+}
+}
